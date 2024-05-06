@@ -21,7 +21,6 @@ export default function LanguageSelect({
         onChange={handleChange}
       >
         <option value="">Language</option>
-        <option value="">No Filter</option>
         {languages.map((language: string, index: number) => (
           <option key={index} value={language}>
             {language}

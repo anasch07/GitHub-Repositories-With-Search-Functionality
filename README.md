@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Github User Repository Browser
 
-## Getting Started
+A responsive Next.js application that allows users to search for a GitHub user and view their repositories. Users can filter repositories by search query and/or primary language.
+####  🚨 Check It Live
+Website: [https://github-repositories-with-search-functionality.vercel.app/](https://github-repositories-with-search-functionality.vercel.app/)
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+![landing](./landing.png)
+![repositories](./repositories.png)
+
+
+
+## 🚀 How to Run
+
+`npm install`
+`npm run dev`
+
+### You will need to create a .env file in the root directory with the following contents:
+
 ```
+NEXT_PUBLIC_GITHUB_GRAPHQL=https://api.github.com/graphql
+GITHUB_ACCESS_TOKEN=YOUR_TOKEN
+```
+You can create a GitHub access token by following the instructions [here](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token).
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🧪 How to test
+`npm run test`
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+## 🏗️ Tech Stack
 
-To learn more about Next.js, take a look at the following resources:
+<details open>
+  <summary>Frontend</summary>
+  <ul>
+    <li><a href="https://emotion.sh/">TailwindCSS / CSS Library</a></li>
+    <li><a href="https://www.typescriptlang.org/">TypeScript</a></li>
+    <li><a href="https://www.apollographql.com/">Apollo / GraphQL</a></li>
+    <li><a href="https://nextjs.org/">Next.js</a></li>
+    <li><a href="https://jestjs.io/fr/">Jest</a></li>
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+  </ul>
+</details>
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## 📆  Future Improvements
 
-## Deploy on Vercel
+1. Add storybook for component documentation
+2. Add more tests for components and utilities and mock GraphQL queries
+3. Add more error handling for GraphQL queries
+4. Add pagination for search results
+5. Replace authentication with Github token with authentication with App: I would like to make the authentication process dynamic, so that you would not have to go to GitHub to generate the access token, replacing it with a JWT, in this case for example Auth0.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
