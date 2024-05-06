@@ -5,7 +5,6 @@ import {PageProps} from "@/types/pageProps";
 import {getServerSidePaginationParams} from "@/utils/getServerSidePaginationParams";
 import {getApolloClient} from "@/graphql/apolloClient";
 import {LINKS} from "@/constants/URL";
-import {GET_USER_REPOSITORIES} from "@/graphql/graphql-queries/GITHUB_REPOSITORIES_QUERIES";
 import GET_USERS from "@/graphql/graphql-queries/GITHUB_USERS_QUERIES";
 import Error from "@/app/(public)/error";
 import UserProfileRow from "@/components/UserProfileRow";
@@ -44,7 +43,7 @@ export default async function Home({searchParams}: PageProps) {
 
 
     return (
-        <div className="flex flex-col h-screen w-screen items-center justify-start pt-[230px]">
+        <div className="flex flex-col h-screen w-screen items-center justify-start pt-[130px]">
             <div className="flex flex-col items-center mt-10 md:w-[32rem] max-w-[32rem] w-full px-10">
                 <Image
                     src="/images/githubLogo.png"
