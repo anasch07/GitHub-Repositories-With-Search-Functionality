@@ -32,5 +32,5 @@ export default async function Page({ params }: { params: { userId: string } }) {
         }
     }
 
-    return <RepositoryWrapper response={data} />;
+    return <RepositoryWrapper response={data} data-testid="repository-wrapper" />;
 }

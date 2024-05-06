@@ -7,7 +7,7 @@ import Header from "@/components/Header";
 export default function GithubSearch({ children }: { children: ReactNode }) {
     return (
         <>
-            <Header />
+            <Header data-testid="header" />
             <main>{children}</main>
         </>
     );

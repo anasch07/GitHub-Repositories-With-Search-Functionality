@@ -8,6 +8,9 @@ import RepositoryList from "@/components/RepositoryList";
 import UserProfilePreview from "@/components/UserProfilePreview";
 
 export default function RepositoryWrapper({response}: { response: any }) {
+    console.log('ena houni')
+    console.log(response)
+
     const data = response.data
 
     const [repositories, setRepositories] = useState<Repository[]>([])

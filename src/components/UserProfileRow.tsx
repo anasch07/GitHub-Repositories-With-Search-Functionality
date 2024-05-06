@@ -24,6 +24,7 @@ export default function UserProfileRow({ response }: { response: any }) {
 
     return (
         <div
+
              className={
             clsxm("flex flex-col sm:flex-row items-center" ,
                 " my-12 py-4 px-6 border border-gray-200 rounded-lg "
