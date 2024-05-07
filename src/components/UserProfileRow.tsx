@@ -25,6 +25,7 @@ export default function UserProfileRow({ response }: { response: any }) {
 
     return (
 
+        <Link href={`/repositories/${userInfo.login}`}>
 
         <div
              className={
@@ -40,11 +41,9 @@ export default function UserProfileRow({ response }: { response: any }) {
                 alt="avatar"
             />
             <div className="mt-4 sm:mt-0 sm:ml-4 text-center sm:text-left">
-                <Link href={`/repositories/${userInfo.login}`}>
                 <p className="text-lg font-semibold
                 hover:underline
                 ">{userInfo.name}</p>
-                    </Link>
                 <p className="text-sm text-gray-500">{userInfo.login}</p>
                 <div className="flex justify-center sm:justify-start mt-2">
                     <p className="text-sm text-gray-500">
@@ -58,6 +57,8 @@ export default function UserProfileRow({ response }: { response: any }) {
                 </div>
             </div>
         </div>
+        </Link>
+
     );
 
 }
