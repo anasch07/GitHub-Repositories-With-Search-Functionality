@@ -34,7 +34,7 @@ async function getGithubUserInfo(login_username: string): Promise<{ data: Github
 
 export default async function Home({searchParams}: PageProps) {
     const {page_username} = getServerSidePaginationParams(searchParams);
-    let response
+    let response = undefined;
     if (page_username) {
         response = await getGithubUserInfo(page_username);
         if (response.error && response.error.graphQLErrors && response.error.graphQLErrors[0].type === 'NOT_FOUND') {
@@ -63,7 +63,7 @@ export default async function Home({searchParams}: PageProps) {
                     <UserProfileRow response={response.data}/>
                 </div>
             )}
-            {!response && (
+            {response === null && (
                 <div className="flex items-center flex-col md:w-[32rem] max-w-[32rem] w-full px-10 mt-4 ">
                     <p className="text-gray-500 text-center">No valid user found</p>
                 </div>
