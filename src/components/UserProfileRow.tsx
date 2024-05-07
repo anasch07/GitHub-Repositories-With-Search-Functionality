@@ -21,10 +21,12 @@ import Link from "next/link";
 export default function UserProfileRow({ response }: { response: any }) {
 
     const userInfo:User = response.data.user;
+    console.log(userInfo)
 
     return (
-        <div
 
+
+        <div
              className={
             clsxm("flex flex-col sm:flex-row items-center" ,
                 " my-12 py-4 px-6 border border-gray-200 rounded-lg "
