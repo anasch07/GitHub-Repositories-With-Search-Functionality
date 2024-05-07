@@ -21,7 +21,7 @@ const Header = () => {
                         label={"Documentation"}
                         onClick={() => {
                             window.location.href =
-                                "https://github.com/anasch07";
+                                "https://github.com/anasch07/GitHub-Repositories-With-Search-Functionality";
                         }}
                     />
                 </div>
