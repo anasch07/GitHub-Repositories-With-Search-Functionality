@@ -23,6 +23,7 @@ GITHUB_ACCESS_TOKEN=YOUR_TOKEN
 ```
 You can create a GitHub access token by following the instructions [here](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token).
 
+
 ## 🧪 How to test
 `npm run test`
 
